@@ -66,14 +66,14 @@ def graphic_error_hopfield(patterns,hopfield_net):
 
 
 
-
+'''
 show_letters(10,5,vowels)
 patterns = create_patterns(vowels)
 hop = Hopfield(patterns) ## constructor
 testing_hopfield(patterns,hop) #testing original patterns
 process_noise_patterns(patterns,hop) # testing patterns with noise
 graphic_error_hopfield(patterns,hop) # graphic error
-
+'''
 
 
 

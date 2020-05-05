@@ -19,17 +19,6 @@ def show_letters(w,h,arr,R = 1, C = None):
 
 
 
-def add_noise(p,percent,a,b):
-    new_pattern = p.copy()
-    for i in range(0,len(new_pattern)):
-        temp = rng = np.random.rand() * 100.00
-        if temp <= percent:
-            if np.array_equal(new_pattern[i],a):
-                new_pattern[i] = b
-            else:
-                new_pattern[i] = a
-    return new_pattern
-
 
 
 def create_patterns(vowels):
@@ -40,6 +29,19 @@ def create_patterns(vowels):
     return patterns
 
 
+
+
+
+def add_noise(p,percent,a,b):
+    new_pattern = p.copy()
+    for i in range(0,len(new_pattern)):
+        temp = rng = np.random.rand() * 100.00
+        if temp <= percent:
+            if np.array_equal(new_pattern[i],a):
+                new_pattern[i] = b
+            else:
+                new_pattern[i] = a
+    return new_pattern
 
 def create_patterns_with_noise(patterns,percent,a,b):
     a = np.array([a])
